@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Java Script</title>
+     <style>
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f9; }
+        .card { background: white; padding: 20px; border-radius: 8px; max-width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h3 { margin-top: 0; color: #333; }
+        p { margin: 10px 0; font-size: 16px; }
+        span { font-weight: bold; color: #007bff; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h3>Receipt Summary</h3>
+        <!-- demo1 shows Math.round() -->
+        <p>Estimated Bill (Rounded): $<span id="demo1">0</span></p> 
+        
+        <!-- demo shows toFixed(2) -->
+        <p>Final Total (With Tip): $<span id="demo">0.00</span></p>
+    </div>
+    <h2>NUmber Java Script</h2>
+    <p>this is decimal</p>
+<p id="demo"></p>
+
+<script>
+    // 1. Initial raw data
+    let originalBill = 7.8; 
+    let tipPercent = 0.15; // 15% tip
+
+    // 2. Use Math.round() to get a quick estimate of the base bill
+    let baseRounded = Math.round(originalBill);
+    document.getElementById('demo1').innerHTML = baseRounded; // Outputs: 8
+
+    // 3. Do precise math for the actual total
+    let tipAmount = originalBill * tipPercent;
+    let finalTotal = originalBill + tipAmount; // 7.8 + 1.17 = 8.97
+
+    // 4. Use toFixed(2) to format the final price beautifully for the user
+    let formattedTotal = finalTotal.toFixed(2);
+    document.getElementById('demo').innerHTML = formattedTotal; // Outputs: 8.97
+</script>
+<script>
+    // toFixed()-decimal points fixed karna
+
+    let price = 99.9876;
+    let fixed = price.toFixed(2);
+    document.getElementById("demo").innerHTML=fixed;
+</script>
+
+<script>
+    let number= 7.8;
+  console.log(Math.round(number)); // 8 (Type: number)
+console.log(number.toFixed(2));  // "7.80" (Type: string)
+console.log(Math.ceil(number));   // 8 (Always rounds up)
+console.log(Math.floor(number));  // 7 (Always rounds down)
+</script>
+
+<script>
+function multiply(a, b = 2) {
+  return a * b;
+}
+
+console.log(multiply(5));
+console.log(multiply(5, 10));
+</script>
+
+
+<table>
+    <tr>
+        <li>HTML</li>
+        <li> CSS</li>
+        <li> JavaScript</li>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <ul>HTML</li>
+        <li> CSS</li>
+        <li> JavaScript</li>
+    </tr>
+</table>
+</body>
+</html>

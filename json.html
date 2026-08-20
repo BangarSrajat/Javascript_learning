@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json Format</title>
+</head>
+<body>
+    <h3>
+        JSON Kya Hai?
+
+JSON = JavaScript Object Notation
+
+Simple Definition: JSON ek format hai data likhne ka — 
+jo Object jaisa dikhta hai, lekin text/string ke roop mein hota hai.
+ Ye data ko ek jagah se doosri
+ jagah bhejne ke liye use hota hai (jaise server se browser tak).
+    </h3>
+
+    <h3>
+        Object vs JSON — Farak Samjho
+            JavaScript Object:
+    </h3>
+    <script>
+        let user = {
+  name: "Rahul",
+  age: 25
+};
+
+//JSON (Same Data, Lekin STRING Ke Roop Mein):
+
+// let jsonData = '{"name": "Rahul", "age": 25}';
+
+//Dhyan Do Farak:
+
+//Object mein keys pe quotes zaroori nahi (name:)
+//JSON mein keys pe quotes ZAROORI hain ("name":)
+// JSON poora ek string hai (bahar se quotes lage hain)
+        </script>
+
+<!-- //2 Important Methods
+//1. JSON.parse() — JSON String Ko Object Mein Convert Karna -->
+
+<script>
+    let jsonData = '{"name": "Rahul", "age": 25}';
+
+    let obj = JSON.parse(jsonData);
+    console.log(obj.name);
+</script>
+
+<!-- 2. JSON.stringify() — Object Ko JSON String Mein Convert Karna (Ulta Kaam) -->
+
+<script>
+    let objs = { name: "Rahul", age: 25 };
+let jsonstring =JSON.stringify(objs);
+console.log(jsonstring);
+</script>
+
+
+<div class="card">
+  <div id="userCard"></div>
+  <button id="loadBtn">Load User Data</button>
+</div>
+
+<script>
+
+    let jsonFormserver = '{"name": "rahul", "age": 30, "city": "indore"}';
+    let usercard = document.getElementById("userCard");
+    let loadBtns = document.getElementById("loadBtn");
+
+
+    loadBtns = addEventListener("click", function(){
+         let users = JSON.parse(jsonFormserver);
+    
+       usercard.innerHTML = "<h2>" + user.name + "</h2><p>City: " + user.city + "</p><p>Age: " + user.age + "</p>";
+    });
+</script>
+
+</body>
+</html>

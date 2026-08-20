@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    <h2>How to write a Function</h2>
+<script>
+    // noraml function
+    function greet(name){
+        console.log("hello"  + name);
+    }
+    greet("rahul");
+</script>
+
+<script>
+
+    //arrow function
+
+    const tree=(a, b)=>{
+        return a + b;
+    };
+    let result = tree(5,3);
+    console.log(result);
+</script>
+
+<script>
+    const subts = (b,c)=>{
+   return b*c;
+    };
+    const resl=subts(10,5);
+    console.log(resl);
+</script>
+
+<script>
+    // short code function
+
+const additin=(a,y)=>a+y;
+console.log(additin(5,10));
+</script>
+
+
+
+<script>
+    function checkVoter(age){
+        if(age>=18){
+            return "eligbal to vote";
+        }
+        else{
+            return "not eligble";
+                }
+
+    
+    }
+    let restult=checkVoter(20);
+    console.log(restult);
+</script>
+
+<script>
+    function checkvoter(age){
+        if(age>=18){
+            return "eligbal to vote";
+        }
+        else{
+            return "not eligble";
+        }
+    }
+    let res=checkvoter(15);
+    console.log(res);
+</script>
+
+<script>
+    function printMultiples(num){
+        for(let i=1;i<=5;i++){
+            console.log(num * i);
+        }
+    }
+    printMultiples(3);
+</script>
+
+<script>
+   function checkPalindrome(word) {
+  let reversed = word.split("").reverse().join("");
+  
+  if (word === reversed) {
+    return "Palindrome hai";   // yahan kya likhoge?
+  } else {
+    return "Palindrome nahi";   // yahan kya likhoge?
+  }
+}
+
+console.log(checkPalindrome("hello"));
+
+
+
+
+</script>
+
+<script>
+//"Rahul is 25 years old"
+    function getUserInfo(user){
+        return user.name + " is " + user.age + " years old ";
+    }
+    let user1 = {
+        name :"rahul",
+        age:  20
+    };
+    console.log(getUserInfo(user1));
+</script>
+
+<script>
+    let product ={
+        name : "laptop",
+        price: 5000,
+        inStock: true
+    }
+function checkAvailability(product){
+    if(product === inStock){
+        return "Product available hai, price:" + product.price;
+    }
+    else{
+        return "Product available nahi hai";
+    }
+}
+
+console.log(checkAvailability(product));
+</script>
+</body>
+</html>

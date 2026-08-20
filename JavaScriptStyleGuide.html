@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>
+
+        Kyu Zaroori Hai Style Guide?
+
+Socho — tumne bahut saari galtiyan ki hain is practice mein jaisi:
+
+Kabhi let bhool jana
+Kabhi variable naam inconsistent rakhna (prod vs prods)
+Kabhi bekar conditions likhna
+
+Style Guide in sab problems ko avoid karne ke rules deta hai.
+
+1. Naming Conventions (Naam Rakhne Ke Rules)
+Variables aur Functions — camelCase
+    </h2>
+
+    <h2>
+
+        javascript
+// ✅ Sahi
+let firstName = "Rahul";
+function calculateTotal() { }
+
+// ❌ Galat
+let first_name = "Rahul";      // snake_case (JS mein use nahi hota)
+let FirstName = "Rahul";        // PascalCase (sirf classes ke liye)
+    </h2>
+<br>
+    <h2>
+
+        Constants (Jo Kabhi Nahi Badalti) — UPPER_CASE
+javascript
+const MAX_USERS = 100;
+const API_KEY = "abc123";
+    </h2>
+<br>
+    <h2>
+
+        Meaningful Naam Rakho (Bahut Important!)
+javascript
+// ❌ Bura
+let x = 25;
+let d = new Date();
+
+// ✅ Achha
+let age = 25;
+let currentDate = new Date();
+    </h2>
+
+<br>
+    <h2>
+
+        4. let/const Use Karo, var Nahi
+javascript
+// ✅ Sahi (Modern JavaScript)
+let count = 0;
+const name = "Rahul";
+
+// ❌ Purana Tarika (Avoid Karo)
+var count = 0;
+
+Rule:
+
+Agar value badlegi → let
+Agar value kabhi nahi badlegi → const
+var kabhi use mat karo (purana, problematic hai)
+    </h2>
+
+    <br>
+    <h2>5. Comparison — === Use Karo, == Nahi
+javascript
+// ✅ Sahi
+if (age === 18) { }
+
+// ❌ Avoid Karo
+if (age == 18) { }
+
+(Yaad hai humne pehle detail mein discuss kiya tha ye!)</h2>
+
+<br>
+<h2>6. Functions — Chhote Aur Ek Kaam Ke Liye
+javascript
+// ✅ Achha — Ek function, ek specific kaam
+function calculateTax(price) {
+  return price * 0.1;
+}
+
+function calculateTotal(price) {
+  return price + calculateTax(price);
+}
+
+// ❌ Bura — Ek hi function mein bahut sara kaam
+function doEverything(price) {
+  let tax = price * 0.1;
+  let total = price + tax;
+  console.log(total);
+  // ... aur bhi bahut kuch
+}</h2>
+
+<br>
+<h2>7. Comments — Jaha Zaroori Ho, Wahi Likho
+javascript
+// ✅ Achha — Complex logic explain karta hai
+// Agar user ka age 18 se kam hai, to unhe access nahi milega
+if (age < 18) { }
+
+// ❌ Bekar — Obvious cheez explain kar raha hai
+// age ko 18 se compare karo
+if (age < 18) { }</h2>
+
+<br>
+<h2>Simple Rule Yaad Rakho
+Data Type	const Ka Behavior
+String, Number, Boolean	Bilkul fixed — kabhi change nahi ho sakta
+Array	Variable fixed, lekin andar ke elements change ho sakte hain (push, pop, etc.)
+Object	Variable fixed, lekin properties change ho sakti hain</h2>
+</body>
+</html>

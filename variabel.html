@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello, World!</title>
+    <link rel="stylesheet" href="styles.css" />
+ 
+  </head>
+  <body>
+    <div class="card">
+  <div class="avatar" id="avatarLetter"></div>
+  
+  
+ 
+  <div class="info">
+    <p><b>Name:</b><h2 id="displayName"></h2>
+    <p><b>Age:</b> <span id="displayAge"></span></p>
+    <p><b>City:</b> <span id="displayCity"></span></p>
+    <p><b>Student:</b> <span id="displayStudent"></span></p>
+    <p><b>Favourite Language:</b> <span id="displayLang"></span></p>
+  </div>
+</div>
+   <script>
+  let name = "rajat bangar";
+  let age = 29;
+  let city = "indore";
+  let student = true;
+  let lng = "javascript";
+
+
+
+document.getElementById("displayName").textContent = name;
+document.getElementById("displayAge").textContent = age;
+document.getElementById("displayCity").textContent = city;
+document.getElementById("displayStudent").textContent = student ? "yes":"no";
+document.getElementById("displayLang").textContent = lng;
+console.log(typeof name);
+console.log(typeof age);
+console.log(typeof student);
+</script>
+  </body>
+</html>

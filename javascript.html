@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    
+<h1>open console to see output</h1>
+<script>
+    const name = "shubham";
+    let age=25;
+    let city ="indore";
+
+    console.log("name.", name);
+    console.log("age", age);
+     console.log(`Hello ${name}, you are ${age} years old and live in ${city}.`);
+
+// sum
+
+ let a = 15;
+ let b= 7 ;
+
+//  Array
+
+let favorites = ["cricket","tennis","football"];
+
+console.log(favorites);
+console.log(favorites[0]);
+console.log(favorites[1]);
+ console.log("sum:", a+b);
+  console.log("min:", a-b);
+  console.log("multy", 5*10);
+  console.log("divicde", 5/10)
+  console.log("is grater than", a > b);
+  console.log("is less than", a<b);
+  console.log("is equal", a==b);
+      </script>
+
+
+<script>
+    function agea(agename){
+        if(agename>=17){
+            return "tes";
+        }
+        else{
+            return "no";
+        }
+    }
+    let resut= agea(20);
+    console.log(resut);
+    </script>
+
+ <script>
+    function getuser(){
+        return user.name + " is " + user.age + "years old ";
+    }
+
+    let user={
+        name: "rahul",
+        age:25
+    };
+ console.log(getuser(user));
+ </script>
+</body>
+
+</html>

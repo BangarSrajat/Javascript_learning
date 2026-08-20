@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Object</title>
+</head>
+<body>
+
+    <h2>1. map() — Har Element Ko Transform Karna
+
+map() poore array ke har element pe kuch operation karta hai, aur naya array return karta hai (original nahi badalta).</h2>
+
+<h3>Samjho Kaise Kaam Karta Hai:
+
+
+
+map() har element (1, 2, 3, 4) ko function ke andar bhejta hai
+Function jo bhi return kare, wahi naye array mein jata hai
+1 → 2, 2 → 4, 3 → 6, 4 → 8 → naya array [2, 4, 6, 8]</h3>
+<!-- filter() -->
+
+<h3>2. filter() — Condition Ke Hisaab Se Naya Array Banana
+
+filter() har element ko check karta hai, aur sirf wo elements rakhta hai jo condition true ho — baaki hata deta hai.</h3>
+ 
+
+<!-- reduce -->
+
+<h3>3. reduce() — Poore Array Ko Ek Single Value Mein "Reduce" Karna
+
+reduce() sabse tricky hai, lekin bahut powerful. Ye poore array ko combine karke ek final value banata hai (jaise total sum, ya average).</h3>
+<p>Samjho Kaise Kaam Karta Hai:
+
+accumulator — "abhi tak ka total" (jaise humara count variable tha!)
+current — array ka current element
+0 — starting value (accumulator yahi se shuru hota hai)
+
+Trace Karo:
+
+Start: accumulator = 0
+current = 10 → 0 + 10 = 10 → accumulator ban gaya 10
+current = 20 → 10 + 20 = 30 → accumulator ban gaya 30
+current = 30 → 30 + 30 = 60 → accumulator ban gaya 60
+current = 40 → 60 + 40 = 100 → accumulator ban gaya 100</p>
+
+<p>Important Samjho: reduce() sirf ek final value print/return karta hai (jo console.log(totalPrice) mein aayegi), teen alag lines nahi. Tumne jo "100, 300, 450" bola — wo internal steps the (jo maine trace kiya), lekin actual output sirf 450 hoga, kyunki console.log sirf ek baar chal raha hai, reduce() ke poora complete hone ke baad.</p>
+    <script>
+
+        let student = [
+            { name:"shubham", marks : 90, age:20},
+            { name:"Rajat", marks : 87, age:22}
+        ];
+        
+        for(let i=0; i < student.length; i++){
+           
+             if(student[i].marks > 87){
+             console.log(student[i].name + ":" + student[i].marks);
+        }
+        else{
+            console.log("fail");
+        }
+        }
+       
+    </script>
+
+    <script>
+        let price = 500;
+if (price > 300) { console.log(true) }else{ console.log(false)}
+    </script>
+
+    
+    <script>
+
+        let car = { brand: "Honda", price: 800000 };
+if (car.price > 500000) { console.log("ddf") }
+    </script>
+
+    <script>
+        let cars = [{ brand: "Honda", price: 800000 }];
+for (let i = 0; i < cars.length; i++) {
+  if (cars[i].price > 500000) { 
+    console.log(cars[i].price);
+   }
+}
+    </script>
+
+    <!-- Chalo Yaad Karte Hain — Farak Kya Hai Object Aur Array of Objects Mein
+
+Object (Akela): -->
+
+<script>
+    let caree = { brand: "Honda", price: 800000 };
+if (caree.price > 500000) { }   // seedha .price lagao, loop ki zaroorat nahi (sirf ek object hai)
+</script>
+
+<script>
+    let carss = [{ brand: "Honda", price: 800000 }];
+for (let i = 0; i < cars.length; i++) {
+  if (carss[i].price > 500000) { }   // pehle [i] (position), phir .price
+}
+//Simple Farak:
+
+//Ek akela object → seedha .property lagao
+// Array ke andar object (jab loop ho) → pehle [i] (position), phir .property
+</script>
+
+
+<script>
+
+    let prod = [
+        { name: "Shirt", price: 400 },
+  { name: "Shoes", price: 1200 },
+  { name: "Cap", price: 300 }
+    ];
+
+    for (let i=0; i<prod.length; i++){
+        console.log(prod[i].name + ":" + prod[i].price);
+        
+    }
+    </script>
+<script>
+    let prods = [
+        { name: "Shirt", price: 400 },
+  { name: "Shoes", price: 1200 },
+  { name: "Cap", price: 300 }
+    ];
+
+    for (let i=0; i<prods.length; i++){
+        if(prods[i].price>500){
+            console.log(prods[i].name + ":" + prods[i].price);
+        }
+    }
+    </script>
+
+    <!-- map() method -->
+
+    <script>
+
+        let numbers = [1,2,3,4,5];
+        let Dubled = numbers.map(function(num){
+          return num * 2;
+        });
+        console.log(Dubled);
+        </script>
+
+
+<script>
+    let ntnumber=[5,25,25];
+    let intoduble=ntnumber.map(function(num){
+        return num *num;
+    });
+    console.log(intoduble);
+</script>
+
+<!--  filter()-->
+
+<script>
+    let age=[20,10,35,40,15];
+    let bigage= age.filter(function(num){
+   return num>18;
+    });
+    console.log(bigage)
+</script>
+
+<!-- reduce() -->
+
+<script>
+
+    let sum = [10,20,30,40];
+
+    let total =sum.reduce(function(accumulator,current){
+        return accumulator + current;
+    });
+    console.log(total);
+    </script>
+
+
+<script>
+    let prices = [100, 200, 300];
+
+    let totalp=prices.map(function(num){
+
+        return num + (num * 10 / 100);
+    });
+    console.log(totalp);
+    </script>
+
+
+<script>
+    let ages = [12, 25, 8, 45, 16, 30];
+    let filterage =ages.filter(function(num){
+    return num >18;
+
+    });
+    console.log(filterage);
+    </script>
+
+    <script>
+        let marks = [80, 90, 70, 60];
+        let totalmarks =marks.reduce(function(accumulator, current){
+            return accumulator+ current;
+        }, 0);
+        console.log(totalmarks);
+    </script>
+    <!-- <script>
+        const scores = [10, 20, 30];
+scores = [100, 200];
+console.log(scores);
+    </script> -->
+
+  
+</body>
+</html>

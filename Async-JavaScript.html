@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asyncs Java scropt</title>
+</head>
+<body>
+    <h3>
+        Async JavaScript Kya Hai? (Recap)
+    </h3>
+    <p>
+  JavaScript is a single-threaded language, meaning it executes one task at a time.
+
+However, when there's a time-consuming task (like fetching data from a server, 
+or a timer), JavaScript doesn't wait — it sends that task to run 
+in the background and continues executing the rest of the code.
+ Once the background task completes, its result is
+ handled later. This behavior is called Asynchronous programming."
+
+        Yaad hai humne Timer (setTimeout) mein dekha tha — JavaScript wait nahi karta, 
+        aage badhta rehta hai? Ye hi "Asynchronous" behavior hai.
+    </p>
+
+    <h3>
+
+1. Promises — Kya Hai?
+
+Promise ek "vaada" hai — JavaScript future mein kabhi result dega, abhi turant nahi.
+
+Simple Analogy: Socho tumne Swiggy pe order kiya. Turant khana nahi milta — company tumhe ek "promise" deti hai ki "khana aayega". Ye promise 2 tareeke se khatam ho sakta hai:
+
+Success (khana mil gaya) — isse "Resolved" kehte hain
+Failure (order cancel ho gaya) — isse "Rejected" kehte hain
+    </h3>
+
+
+    <h4>
+
+        2. Promise Kya Hai?
+
+"Promise ek JavaScript object hai jo future mein milne wale result ka "vaada" represent karta hai. Ye 3 states mein hota hai:
+
+Pending — abhi result nahi aaya, wait ho raha hai
+Resolved/Fulfilled — task successfully complete hua
+Rejected — task fail hua, error aaya
+
+.then() se hum success case handle karte hain, .catch() se error/failure case handle karte hain."
+
+3. fetch() Kya Hai?
+
+"fetch() ek built-in JavaScript function hai jo server se data mangne
+ (API call karne) ke liye use hota hai. Ye ek Promise return karta hai.
+  Server se response JSON format mein aata hai, jise humein 
+  .json() method se JavaScript Object mein convert karna padta hai, 
+  taaki hum data use kar sakein."
+
+4. .then() Aur .catch() Mein Kya Farak Hai?
+
+".then() tab chalta hai jab Promise successfully resolve ho jata hai 
+— matlab kaam sahi se complete hua. 
+.catch() tab chalta hai jab kuch galat ho jaye (error aaye, ya Promise reject ho)
+ — isse hum errors ko gracefully handle karte hain, taaki poora program crash na ho."
+
+5. JSON Kya Hai?
+
+"JSON (JavaScript Object Notation) ek lightweight data 
+format hai jo data ko text/string ke roop mein represent karta hai.
+ Ye server aur client ke beech data transfer karne ke liye most common format hai,
+  kyunki ye language-independent hai — har programming language 
+  JSON ko samajh sakti hai."
+    </h4>
+  <h4>
+
+Promise Ka Structure
+
+let orderpromis = new Promise(function (resolve ,reject){
+    let ordersucess = true;
+    if(ordersucess){
+        console.log("Khaa aa gaya");
+    }
+    else{
+        console.log("order cancel ho gaya");
+    }
+});
+
+Promise Ka Result Use Karna — .then() Aur .catch()
+orderpromis
+.then(function(result){
+console.log(result);
+})
+.catch(function(error){
+    console.log(error);
+})
+
+<h4>
+
+    Bilkul sahi! ✅
+
+Chunki orderSuccessful = true hai:
+
+resolve chalega ✅ — kyunki condition true hai, resolve("Khana aa gaya!") execute hoga
+.then() chalega ✅ — kyunki resolve hone pe .then() hi trigger hota hai (success wala handler)
+</h4>
+
+  </h4>  
+
+  <script>
+
+
+ let responsesucces = new Promise(function(resolve ,reject){
+ let ordersucess = true;
+ if(ordersucess){
+    console.log("Kahan aa gaya");
+ }
+ else{
+    console.log("Order cancel");
+ }
+ });
+
+ 
+ responsesucces  .then(function(result){
+ console.log(result);
+ });
+
+ responsesucces.catch(function(error){
+ console.log(error);
+ });
+  </script>
+
+
+<script>
+
+    function checknumber(num){
+        return new Promise(function(resolve,error){
+            if(num>0){
+              resolve("Postive number");
+            }
+            else{
+                error("Negtiv number");
+            }
+        });
+    }
+
+    checknumber(-3)
+    .then(function(result){
+        console.log(result);
+    })
+    .catch(function(error){
+        console.log(error);
+    });
+</script>
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<title>Async/Await vs Then/Catch</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  .card {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 350px;
+  }
+  #output1, #output2 {
+    margin-top: 10px;
+    text-align: left;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    min-height: 40px;
+    font-size: 14px;
+  }
+  button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    margin: 5px 0;
+  }
+  button:hover {
+    background: #45a049;
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h3>Method 1: .then()/.catch()</h3>
+  <button id="thenBtn">Fetch (then/catch)</button>
+  <div id="output1">Result yahan aayega...</div>
+
+  <h3>Method 2: async/await</h3>
+  <button id="awaitBtn">Fetch (async/await)</button>
+  <div id="output2">Result yahan aayega...</div>
+</div>
+
+<script>
+  // METHOD 1: .then()/.catch()
+  let thenBtn = document.querySelector("#thenBtn");
+  let output1 = document.querySelector("#output1");
+
+  thenBtn.addEventListener("click", function() {
+    output1.textContent = "Loading...";
+
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then(function(response) {
+        return response.json();
+      })
+      .then(function(data) {
+        output1.textContent = data.title;
+      })
+      .catch(function(error) {
+        output1.textContent = "Error: " + error;
+      });
+  });
+
+  // METHOD 2: async/await
+  let awaitBtn = document.querySelector("#awaitBtn");
+  let output2 = document.querySelector("#output2");
+
+  async function getPost() {
+    output2.textContent = "Loading...";
+    try {
+      let response = await fetch("https://jsonplaceholder.typicode.com/posts/2");
+      let data = await response.json();
+      output2.textContent = data.title;
+    } catch (error) {
+      output2.textContent = "Error: " + error;
+    }
+  }
+
+  awaitBtn.addEventListener("click", function() {
+    getPost();
+  });
+</script>
+
+</body>
+</html>
+</body>
+</html>

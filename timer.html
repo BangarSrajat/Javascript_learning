@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- Run a Function After a Delay
+JavaScript timers let you run a function after a delay or repeatedly at fixed intervals.
+
+The two main timer functions are setTimeout() and setInterval(). -->
+
+<!-- <script>
+setTimeout(myfunction, 3000);
+
+function myfunction(){
+    console.log("hello shubham bagar");
+}
+</script> -->
+
+<!-- setInterval -->
+<!-- <script>
+
+    setInterval(function(){
+   console.log("her baar baar chalge")
+    },2000);
+</script> -->
+<!-- clearInterval -->
+
+<!-- <script>
+    let timer= setInterval(function(){
+        console.log("chal raha ")
+    }, 1000);
+
+    setTimeout(function(){
+        clearInterval(timer);
+        console.log("timer band ho rh h")
+    },5000);
+</script> -->
+
+
+<!-- <script>
+
+    console.log("start");
+
+    setTimeout(function(){
+        console.log("Middle")
+    },2000);
+
+    console.log("end");
+</script> -->
+
+
+<!-- <script>
+
+    console.log("A");
+
+    setTimeout(function(){
+        console.log("B")
+    },3000);
+
+    console.log("C");
+
+    setTimeout(function(){
+        console.log("D")
+    },1000);
+</script> -->
+
+<script>
+    console.log("Order Placed ✅");
+
+setTimeout(function() {
+  console.log("Order Confirmed 👨‍🍳");
+}, 2000);
+
+setTimeout(function() {
+  console.log("order Out of Delivery");   // yahan tumhe likhna hai
+}, 4000);   // yahan time likhna hai
+
+setTimeout(function() {
+  console.log("order Delivered");   // yahan tumhe likhna hai
+}, 6000);   // yahan time likhna hai
+</script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date time</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+const d=new Date(); 
+    document.getElementById("demo").innerHTML=d;
+
+    </script>
+
+    <!-- <script>
+        function calculateAge(birthYear) {
+  let currentYear = new Date().getFullYear();
+  return currentYear - birthYear;
+}
+
+console.log(calculateAge(2000));
+
+
+let now = new Date();
+
+console.log(now.getFullYear());   // Year (jaise 2026)
+console.log(now.getMonth());      // Month (0-11, dhyan do 0 se start hota hai!)
+console.log(now.getDate());       // Din (1-31)
+console.log(now.getDay());        // Hafte ka din (0-6, 0=Sunday)
+console.log(now.getHours());      // Ghante (0-23)
+console.log(now.getMinutes());    // Minute
+console.log(now.getSeconds());    // Second
+    </script> -->
+
+<script>
+
+    let today =new Date();
+       
+    //    full date
+ let currentyear = today.getFullYear();
+ let birthMonth = today.getMonth();
+ let birthDay = today.getDay();
+    // full uyear
+
+
+    let nexBirthday = new Date(currentyear,birthMonth -1 , birthDay);
+    console.log(nexBirthday);
+
+</script>
+
+<script>
+    for (let i = 1; i <= 100; i++) {
+  if(3?)
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+
+    <h1>Object</h1>
+    <p id="fname"></p>
+    <p id="fage"></p>
+    <p id="fcity"></p>
+    <p id="fphone"></p>
+<script>
+
+    let person = {
+        name: "john",
+        age: 29,
+        city: "new York"
+    };
+
+
+   person.phone = 9750345345;
+  delete person.age;
+    document.getElementById("fname").innerHTML= person.name;
+    //  document.getElementById("fage").innerHTML= person.age;
+      document.getElementById("fcity").innerHTML= person.city;
+      document.getElementById("fphone").innerHTML = person.phone;
+
+    </script>
+
+  <div class="box">
+    <p><span id="text"></span></p>
+    <button id="Changebtn">Change</button>
+  </div>
+
+  <script>
+     let textadd = { 
+        name: "Rahul",
+        age:25,
+     }
+
+     let text = document.getElementById("text");
+     let btn= document.getElementById("Changebtn");
+     function changeText(){
+       textadd.age = textadd.age +1 ;
+        text.textContent = textadd.age;
+     }
+
+     btn.addEventListener("click", function(){
+        changeText();
+     });
+     changeText();
+    </script>
+
+    //
+
+
+    <!-- <p id="count">0</p>
+<button id="increaseBtn">+1</button>
+<button id="resetBtn">Reset</button>
+
+<script>
+    let count = 0;
+let countDisplay = document.querySelector("#count");
+let increaseBtn = document.querySelector("#increaseBtn");
+let resetBtn = document.querySelector("#resetBtn");
+
+increaseBtn.addEventListener("click", function() {
+  count ++;
+  countDisplay.textContent = count;
+});
+
+resetBtn.addEventListener("click", function() {
+  count = 0;
+  countDisplay.textContent = count;
+});
+</script> -->
+
+
+<div id="productCard"></div>
+<button id="discountBtn">Apply 20% Discount</button>
+<script>
+    let product = {
+  name: "Laptop",
+  price: 50000,
+  inStock: true
+};
+
+let productCard =document.getElementById("productCard");
+let discuntBtn = document.getElementById("discountBtn");
+
+
+function renderProduct(){
+    productCard.innerHTML="<h3>" + product.name + "</h3><p>Price: " + product.price + "</p>";
+}
+renderProduct();
+
+discuntBtn.addEventListener("click",function(){
+    product.price = product.price - (product.price *20/100);
+    renderProduct();
+})
+</script>
+
+<input type="text" id="newname">
+<button id="updatebtn">Update</button>
+
+<script>
+
+    let name=document.querySelector("#newname");
+    let btns= document.querySelector("#updatebtn");
+    
+    btns.addEventListener("click",function(){
+       console.log(name.value);
+    });
+
+    // keyup ->Task: Jab user type kare (button dabaye bina), turant console mein value print ho.
+
+    name.addEventListener("keyup",function(){
+       console.log(name.value);
+    });
+</script>
+
+<div id="box" style="width: 200px; height: 100px; border: 2px solid #000;">
+<!-- <button id="changeback">Background</button> -->
+</div>
+
+<script>
+let boxone = document.getElementById("box");
+let changesbtns = document.getElementById("changeback");
+
+boxone.addEventListener("mouseover",function(){
+  boxone.style.backgroundColor="Yellow";
+});
+
+boxone.addEventListener("mouseout",function(){
+  boxone.style.backgroundColor="red";
+});
+</script>
+</body>
+</html>

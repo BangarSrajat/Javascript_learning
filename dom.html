@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h3>
+        Priority Table — Kya Zyada Use Hota Hai
+Event	Priority	Kaha Use Hota Hai
+click	🔴 High	Buttons, links
+keyup/keydown	🔴 High	Live search, typing detection
+submit	🔴 High	Forms
+change	🔴 High	Dropdowns, checkboxes
+mouseover/mouseout	🟡 Medium	Hover effects
+focus/blur	🟡 Medium	Form validation
+load	🟡 Medium	Page ready hone pe kuch karna
+scroll	🟢 Low	Advanced UI effects
+dblclick, mousedown/up	🟢 Low	Specific use cases
+resize, contextmenu	🟢 Low	Rarely needed
+        
+    </h3>
+    <h3>Simple Suggestion
+
+High Priority Wale (click, keyup, submit, change) Pe Focus Karo — ye 90% real 
+projects mein use hote hain. Baaki events jab zaroorat
+ pade tab seekh lena — abhi sabko yaad karne ki zaroorat nahi.</h3>
+
+
+<div id="box" style="width: 200px; height: 100px; border: 2px solid #000;">
+<!-- <button id="changeback">Background</button> -->
+</div>
+
+<script>
+    let boxone= document.getElementById("box");
+    // boxone.addEventListener("dblclick",function(){
+    //     console.log("Double click hua!");
+    // })
+    //
+
+    boxone.addEventListener("mousedown", function() {
+  console.log("Mouse button dabaya");
+});
+
+boxone.addEventListener("mouseup", function() {
+  console.log("Mouse button chhoda");
+});
+</script>
+
+
+<select id="colorPicker">
+  <option value="red">Red</option>
+  <option value="green">Green</option>
+  <option value="blue">Blue</option>
+</select>
+
+<div id="box" style="width: 150px; height: 100px; border: 2px solid black;"></div>
+
+<script>
+    let boxones = document.getElementById("box");
+    let color= document.getElementById("colorPicker");
+    
+    color.addEventListener("change",function(){
+       boxones.style.backgroundColor = color.value;
+    });
+
+
+    
+    </script>
+
+
+
+</body>
+</html>

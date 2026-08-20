@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Topic</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        let name= "shubham banger";
+        console.log(name.length); //15
+    </script>
+
+    <script>
+        let text= "shubham banger";
+        console.log(text.toUpperCase()); //SHUBHAM BANGAR
+    </script>
+    <script>
+        let list= "SHUBHAM BANGAR";
+        console.log(name.toLowerCase()); //shubham banger
+    </script>
+
+    <script>
+        let nametext= "shubham ";
+        let surnmae = "bangar"
+        console.log(nametext + "" + surnmae) //join karna
+    </script>
+    
+
+    <script>
+        let names= "Arjit ";
+        let surname = "Sing";
+        console.log(`my name is ${name} and my surname is ${surname}`); //modern tarika
+    </script>
+<script>
+
+let password = "mypass";
+console.log(password.length >= 8);
+</script>
+
+
+
+<script>
+    function checkPasswordStrength(password) {
+  if (password.length < 8) {
+    return "Weak Password";
+  } else if (/[0-9]/.test(password)) {
+    return "Strong Password";
+  } else {
+    return "Medium Password";
+  }
+}
+
+
+console.log(checkPasswordStrength("abc"));           // ?
+console.log(checkPasswordStrength("abcdefgh"));      // ?
+console.log(checkPasswordStrength("abcdefgh123"));
+</script>
+</body>
+</html>

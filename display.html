@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     
+</head>
+<body>
+
+    <!-- Day 1: Variables → Salary Calculator
+Day 2: Arrays → Employee Table
+Day 3: DOM → Login Form
+Day 4: Events → Add to Cart
+Day 5: Fetch API → Live Job Listing
+Day 6: React Components → Dashboard
+Day 7: Laravel API → React Integration -->
+
+
+    <!-- Ye ek popup box dikhata hai screen pe,
+      jise user ko "OK" click karke band karna padta ha -->
+      <!-- Kab use karo: Bahut rarely — sirf important warnings ke liye 
+       (jaise "Form submit ho gaya"). Aajkal professional websites 
+       mein bahut kam use hota hai kyunki 
+       ye user experience ko disturb karta hai (poori screen block ho jati hai). -->
+  
+
+       <!-- Kya ho raha hai:
+
+document.getElementById("demo") — HTML mein id="demo" wale element ko dhoondh raha hai
+.innerHTML = "..." — us element ke andar ye content daal raha hai
+
+   Real use-case: Jab user form submit kare, toh page pe message 
+   dikhana; jab button click ho, toh counter update karna; 
+  dynamic content 
+  dikhana — ye sabse common tareeka hai real websites mein. -->
+<p id="demo"></p>
+ <script>
+        // alert("Welcome to my website");
+        document.getElementById("demo").innerHTML = "Hello World";
+
+        console.log("page load");
+        function showmsg(){
+            document.getElementById("output").innerHTML="button click time:";
+        }
+    </script>
+
+
+<h2>innter html</h2>
+<p id="output"></p>
+<button onclick="showmsg()">Click me</button>
+</body>
+</html> 
+
+<!-- 1]avaScript
+.Employee Dashboard
+.Weather App
+.Todo App
+
+2]PHP
+.Login System
+.CRM
+.Contact Form
+
+
+3]WordPress
+.Custom Theme
+.Custom Plugin
+.AJAX Search Plugin
+
+4]React
+.Dashboard
+.WordPress REST API Frontend -->
+
+
+
+<!-- Variables	-Salary Calculator
+if else	-Grade Calculator
+Loops	-Table Generator
+Functions	-EMI Calculator
+Arrays	-Employee List
+Objects	-User Profile
+DOM	-Login Form
+Events	-Add To Cart
+Local Storage-	Todo App
+Fetch API	-Weather App -->

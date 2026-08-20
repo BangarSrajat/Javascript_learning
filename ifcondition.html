@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <h2>Akela If-Else	Simple decision (age check)
+Loop + If-Else	List mein se filter karna
+Function + If-Else	Result decide karke return karna
+Object + If-Else	Property ke basis pe decision
+Array of Objects + Loop + If-Else	List ke har item ka property check</h2>
+    
+<script>
+    let age =18;
+    if(age>=18){
+        console.log("aap vote de sakte ha");
+    }
+</script>
+<!-- if condition -->
+
+<script>
+    let men=15;
+    if(men>=18){
+        console.log("vote de skate ho");
+    }
+    else{
+        console.log("vote nhi de sakte hai");
+    }
+</script>
+
+<!-- if else condition -->
+
+<script>
+    let marks = 35;
+    if(marks>=90){
+        console.log("GRADE A");
+    }
+    else if(marks>=75){
+        console.log("GRADE B");
+    }
+    else if(marks>=65){
+        console.log("GRADE C");
+    }
+    else{
+        console.log("fail");
+    }
+</script>
+<!-- else if condition -->
+ <script>
+
+    let day = 1;
+    switch(day){
+        case 1:
+            console.log("MONDAY");
+             break;
+            case 2:
+            console.log("TUESDAY");
+            break;
+            case 3:
+            console.log("WEDNESNDAY");
+            break;
+            default:
+                console.log("INVALID");
+    }
+ </script>
+
+ <!-- swtich -->
+  <script>
+    let number = 18;
+let hasID = true;
+
+if (number >= 18) {
+  if (hasID) {
+    console.log("Entry allowed");
+  } else {
+    console.log("ID chahiye");
+  }
+} else {
+  console.log("Entry not allowed");
+}
+  </script>
+
+
+  <script>
+
+    let name=25;
+    let hasId = true;
+    if(name>=35 && hasID){
+        console.log("ENtry Allowed");
+    }
+    else{
+        console.log("entry not allwoed");
+    }
+  </script>
+
+  <script>
+
+ function checkNumber(num) {
+  if (num === 0) {
+    console.log("Zero");
+  } 
+  else if (num > 0 && num % 2 === 0) {
+    // ye condition kab true hoti hai? Jab number positive HO aur even HO
+    console.log("Positive Even");   // ✅ isliye ye message
+  } 
+  else if (num > 0 && num % 2 !== 0) {
+    // ye kab true hoti hai? Jab number positive HO aur odd HO
+    console.log("Positive Odd");   // ✅ isliye ye message
+  } 
+  else {
+    // agar upar koi bhi condition match na ho, to number negative hi bacha
+    console.log("Negative");   // ✅ isliye ye message
+  }
+}
+
+checkNumber(7);
+</script>
+
+
+<script>
+    let tem=24;
+
+    if(tem>45){
+
+        console.log("High tempture");
+    }
+    else if(tem>35){
+        console.log("Midum Tempure");
+    }
+    else if(tem>20){
+        console.log("low");
+    }
+    else{
+        console.log("defult");
+    }
+    </script>
+
+<script>
+
+function traffilight(color){
+switch(color){
+    case "red":
+        console.log("stop");
+        break;
+        case "yellow":
+        console.log("Get Ready");
+        break;
+        case"green":
+        console.log("GO 🟢");
+      break;
+        case "orange":
+         console.log("Invalid signal, orange nahi hota traffic light mein");
+         break;
+         default:
+            console.log("Invalid color! Sirf red, yellow, green likho");
+
+}
+
+}
+
+traffilight("green");
+</script>
+
+<script>
+    function calculator(num1, num2, operator) {
+  if (operator === "+") {
+    console.log(num1 + num2);
+  } else if (operator === "-") {
+    console.log(num1 - num2);
+  } else if (operator === "*") {
+    console.log(num1 * num2);
+  } else if (operator === "/") {
+    if (num2 === 0) {
+      console.log("Error: Divide by zero nahi kar sakte!");
+    } else {
+      console.log(num1 / num2);
+    }
+  } else {
+    console.log("Invalid operator! Sirf +, -, *, / use karo");
+  }
+}
+
+calculator(10, 5, "+");   // 15
+calculator(10, 5, "-");   // 5
+calculator(10, 5, "*");   // 50
+calculator(10, 5, "/");   // 2
+calculator(10, 0, "/");   // Error message
+calculator(10, 5, "%");   // Invalid operator
+</script>
+
+
+
+<!-- && condotion -->
+
+<!-- ture ture = ture -->
+<script>
+
+let a=8;
+let hasid = true;
+
+if(a>=18 && hasid){
+
+  console.log("allwoed");
+}
+else{
+  console.log("entrybanned");
+}
+</script>
+
+
+<!-- || true flase = ture ek bhi condotion true ho na chiaya -->
+<script>
+  
+let agenumber = 0;
+let hasLience = false;
+let hashelment = true;
+
+if(agenumber >=18){
+  if(hasLience && hashelment){
+    console.log("Bike chala skate");
+  }
+  else if(hasLience){
+    console.log("Lince chaiyaa");
+  }
+  else if(hashelment){
+    console.log("helment lagna ha");
+  }
+  else{
+    console.log("age nhi hai bike chalna ki");
+  }
+}
+</script>
+
+<script>
+  let numbr =5;
+
+  if(numbr>0){
+    console.log("the number is postive");
+  }
+  else{
+    console.log("the number is nagitve");
+  }
+</script>
+
+<script>
+  //check even odd
+
+  let even = 7;
+
+  if(even % 2 === 0){
+    console.log("even");
+  }
+  else{
+    console.log("odd");
+  }
+
+  let numberone =10;
+  let numbertwo = 20;
+  if(numberone>numbertwo){
+    console.log("grater" );
+  }
+  else{
+    console.log("lessthan");
+  }
+</script>
+
+<script>
+  //grade
+
+ var score = 85;
+var grade;
+
+if (score >= 90) {
+  grade = "A";
+} else if (score >= 80) {
+  grade = "B";
+} else if (score >= 70) {
+  grade = "C";
+} else if (score >= 60) {
+  grade = "D";
+} else {
+  grade = "F";
+}
+console.log("Grade: " + grade);
+</script>
+
+<script>
+  //ticket price
+
+  let ages = 25;
+  let tiketprice;
+
+  if(age <12){
+    tiketprice=5;
+    
+  }else if(age>=12 && age<=18){
+    tiketprice=10;
+  }
+  else if (age>=18 && age<=60){
+    tiketprice=20;
+  }
+  else{
+    tiketprice=15;
+  }
+  console.log("ticket price:" + tiketprice);
+
+</script>
+
+
+</body>
+</html>
