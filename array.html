@@ -29,7 +29,7 @@ for(let i=0;i<color.length; i++){
 </script>
 
 <script>
-    //push isme hum add me value add karta hai
+    //push isme hum end me value add karta hai
 
     let bike =["Honda","Apahce","Gixer"];
     bike.push("R1z");
@@ -63,13 +63,13 @@ for(let i=0;i<color.length; i++){
     // indexOf() position dundna value ki
 
     let name = ["SHubham","chintu","Pankaj"];
-    console.log(name.indexOf("chintu"));
+    console.log(name.indexOf("chintu")); // output: 1
 </script>
 
 <script>
     // includes() — Check Karna Value Hai Ya Nahi
      let names = ["SHubham","chintu","Pankaj"];
-    console.log(names.includes("rani"));
+    console.log(names.includes("rani")); // output: false
 </script>
 
 <script>
@@ -82,7 +82,7 @@ console.log(numbers.slice(1, 3));
     //join() Array Ko String Mein Convert Karna
 
     let namess = ["SHubham","chintu","Pankaj"];
-    console.log(namess.join(","));
+    console.log(namess.join(",")); // output: "Shubham,chintu,pankaj"
 </script>
 
 
@@ -111,7 +111,7 @@ console.log(numberss.lastIndexOf(20));   // 3 (aakhri baar mili)
     let found  =nam.find(function(num){
         return num>10;
     });
-    console.log(found);
+    console.log(found); // output: 20
 </script>
 
 <script>
@@ -161,5 +161,184 @@ const sorted = months.toSorted();
 
 document.getElementById("demo").innerHTML = sorted;
 </script>
+
+<!-- reduce add karta hia
+ 
+reduce() ka use array ki values ko combine karke ek single 
+result nikalne ke liye hota hai, jaise total sum.
+-->
+
+<script>
+
+    let numbers = [10, 20, 30];
+
+let total = numbers.reduce((sum, num) => sum + num, 0);
+
+console.log(total); // 60  sum =0 num=10 10  sum=10 num 20 = 30 sum=30 num=30 = 60
+    </script>
+
+    <!-- some() — check karta hai ki kam se kam ek
+      element condition satisfy karta hai ya nahi. -->
+
+      <script>
+        let numbers = [10, 20, 30];
+
+        let result =numbers.some(num=>num>25);
+
+        console.log(result); // true flase  me anser dege
+        </script>
+
+        <!-- every() — check karta hai ki saare elements condition satisfy karte hain ya nahi. -->
+
+        <script>
+            let numbers = [10, 20, 30];
+
+let result = numbers.every(num => num > 5);
+
+console.log(result); // ouput true aayga 
+            </script>
+
+
+            <!-- includes() — value array mein hai ya nahi -->
+
+          <script>
+            let numbers = [10, 20, 30];
+            let result.includes();
+            console.log(result);
+       
+       
+       
+       </script>
+
+
+
+14. indexOf() — value ka pehla index
+[10, 20, 30].indexOf(20);
+// 1
+
+
+15. lastIndexOf() — value ka aakhri index
+[10, 20, 10].lastIndexOf(10);
+// 2
+
+
+16. findLast() — aakhri se search karke pehli matching value
+[10, 20, 30, 40].findLast(n => n > 15);
+// 40
+
+
+17. findLastIndex() — aakhri matching value ka index
+[10, 20, 30, 40].findLastIndex(n => n > 15);
+// 3
+
+
+
+
+<!-- 4. Array ka order aur structure badalna -->
+
+18. sort() — elements ko sort karta hai
+[30, 10, 20].sort((a, b) => a - b);
+// [10, 20, 30]
+
+
+Descending order:
+[30, 10, 20].sort((a, b) => b - a);
+// [30, 20, 10]
+
+
+19. reverse() — order ulta karta hai
+[10, 20, 30].reverse();
+// [30, 20, 10]
+
+
+20. slice() — array ka portion nikalta hai, original ko nahi badalta
+[10, 20, 30, 40].slice(1, 3);
+// [20, 30]
+
+
+21. splice() — original array mein add, remove ya replace karta hai
+let arr = [10, 20, 30, 40];
+arr.splice(1, 2);
+console.log(arr);
+// [10, 40]
+
+
+Yahan index 1 se 2 elements remove hue.
+22. concat() — arrays ko combine karta hai
+[10, 20].concat([30, 40]);
+// [10, 20, 30, 40]
+
+
+23. flat() — nested arrays ko ek level tak flatten karta hai
+[1, [2, 3], [4]].flat();
+// [1, 2, 3, 4]
+
+
+24. flatMap() — map karta hai aur phir ek level flatten karta hai
+[1, 2, 3].flatMap(n => [n, n * 2]);
+// [1, 2, 2, 4, 3, 6]
+
+
+
+
+<!-- 5. Array aur string conversion -->
+
+25. join() — array ko string banata hai
+["Shubham", "Bangar"].join(" ");
+// "Shubham Bangar"
+
+
+26. toString() — array ko comma-separated string banata hai
+[10, 20, 30].toString();
+// "10,20,30"
+
+
+
+<!-- 6. Modern array methods -->
+
+
+Ye methods original array ko badle bina naya result dete hain.
+27. at() — index se element access karta hai
+[10, 20, 30].at(-1);
+// 30
+
+
+28. toSorted() — original array badle bina sorted copy deta hai
+[30, 10, 20].toSorted((a, b) => a - b);
+// [10, 20, 30]
+
+
+29. toReversed() — reversed copy deta hai
+[10, 20, 30].toReversed();
+// [30, 20, 10]
+
+
+30. toSpliced() — changes ke saath naya array deta hai
+[10, 20, 30].toSpliced(1, 1, 99);
+// [10, 99, 30]
+
+
+31. with() — copy mein ek index ki value replace karta hai
+[10, 20, 30].with(1, 99);
+// [10, 99, 30]
+
+
+<!-- 7. Array banane ke static methods -->
+
+
+Ye array ke Array constructor par use hote hain, kisi existing array par nahi.
+32. Array.isArray() — check karta hai ki value array hai ya nahi
+Array.isArray([10, 20]);
+// true
+
+
+33. Array.from() — iterable ya array-like value se array banata hai
+Array.from("ABC");
+// ["A", "B", "C"]
+
+
+34. Array.of() — diye gaye arguments se array banata hai
+Array.of(5, 10, 15);
+// [5, 10, 15]
 </body>
 </html>

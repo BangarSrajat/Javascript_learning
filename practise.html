@@ -105,7 +105,7 @@ if (age >= 18 && hasLicense && hasHelmet) {
 <script>
     let username = "admin";
 let password = "12345";
-
+// and operator me dono condition true honi chahiye tabhi output true hoga
 if(username === "admin" && password === "12345"){
     console.log("login succsfull");
 }
@@ -117,7 +117,7 @@ else{
 <script>
     let amount = 8000;
 let isMember = true;
-
+// or operator me agar ek condition true h to bhi output true hoga
 if(amount>=5000 || isMember){
     console.log("20% discoung");
 }
@@ -133,7 +133,7 @@ else{
 let email = "admin@gmail.com";
 let passwords = "12345";
 let otp = true;
-
+// and operator me dono condition true honi chahiye tabhi output true hoga
 if(email === "admin@gmail.com" && passwords === "12345" && otp)
 {
     console.log("Login Successful");
@@ -145,7 +145,9 @@ else{
 
 <script>
     let day =3;
-    switch(day){
+    switch(day)
+    // switch me hum value ko check karte hia aur uske hisab se output dete hia
+    {
         case 1:
             console.log("monday");
         break ;
@@ -166,7 +168,7 @@ else{
     let nam1 = 20;
 let nam2 = 10;
 let operator = "*";
-
+// operator ki value 
 switch(operator){
     case "+":
         console.log(nam1+nam2);
@@ -190,6 +192,8 @@ switch(operator){
 </script>
 
 <script>
+
+// choice = 2 hai to withdraw cash print hoga
     let choice = 2;
     switch(choice){
         case 1:

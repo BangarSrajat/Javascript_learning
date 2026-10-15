@@ -71,5 +71,55 @@ boxone.addEventListener("mouseup", function() {
 
 
 
+<!-- 	Kya use karo
+Ek element, ID se	getElementById ya querySelector("#id")
+Ek element (pehla), class/tag se	querySelector
+Saare elements	querySelectorAll -->
+
+
+
+<!-- 1. Text badalna: textContent -->
+
+<h1 id="title">Welcome</h1>
+ <p id="msg">gfg</p>
+<!-- <p class="msg">Message 2</p>  -->
+
+
+<script>
+ let title =document.querySelector("#title");
+  title.textContent = "Hello Shubham bangar";
+  </script>
+
+ <!-- 2. Text badalna: innerHTMl -->
+
+<script>
+  document.querySelector("#msg");
+  msg.innerHTML = "Hello <b>Students</b>";
+  msg.style.color="red";
+  msg.style.backgroundColor="yellow";
+  msg.style.fontSize="30px";
+</script>
+
+<!-- 4. CSS class lagana/hatana: classList  active remove toggle -->
+
+<script>
+  let box = document.querySelector("#title");
+  title.classList.toggle("active");
+</script>
+
+
+<!-- Part 3: Attributes (Naya Topic)
+
+HTML elements ke andar kuch attributes hote hain, 
+jaise src, href, placeholder, value, id, class: -->
+
+<img src="png" alt="photo">
+<a href="https://google.com">Link</a>
+<input type="text" placeholder="Naam likho">
+
+<script>
+  let link = document.querySelector("a");
+  console.log(link.setAttribute("href", "https://youtube.com"));
+</script>
 </body>
 </html>
