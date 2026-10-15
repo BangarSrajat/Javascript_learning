@@ -61,5 +61,68 @@ console.log(x**=y );
 console.log(x/=y);
 console.log(x%=y);
     </script>
+
+
+<script>
+
+
+    const name ="shubham";
+    const age = 20;
+    const isStudent = true;
+    console.log(typeof(name));
+     console.log(typeof(age));
+      console.log(typeof(isStudent));
+
+
+
+      console.log(typeof 3.14); // number
+console.log(typeof "50"); // number
+console.log(typeof false); // boolena
+
+
+let x ;
+console.log(typeof(x));
+
+// undefined: variable bana, par JavaScript ko value nahi mili.
+// null: aap khud jaan-boojhkar kehte ho “yahan koi value nahi hai”.//
+
+
+function getType(value){
+    console.log(getType(10));
+console.log(getType("hi"));
+console.log(getType(true));
+}
+
+function isNumber(value){
+    if(typeof value === "number"){
+        return 'true';
+    }
+    else{
+        return 'flase';
+    }
+}
+isNumber(5)
+isNumber("5")
+
+function describe(value){
+    if(typeof value === "string"){
+        return 'Ye text hai';
+    }
+    else if(typeof value === "number"){
+return 'Ye numbers hai';
+    }
+    else if(typeof value === "boolean" ){
+        return 'Ye boolean hai';
+    }
+    else{
+        return 'Pata nahi';
+    }
+} 
+
+console.log(describe("hi"));      // Ye text hai
+console.log(describe(25));        // Ye number hai
+console.log(describe(true));      // Ye boolean hai
+console.log(describe(null)); 
+</script>
 </body>
 </html>

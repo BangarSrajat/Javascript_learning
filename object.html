@@ -138,5 +138,50 @@ boxone.addEventListener("mouseout",function(){
   boxone.style.backgroundColor="red";
 });
 </script>
+
+<script>
+
+  let person = {
+    name: "shuma",
+    age:21,
+    city: "indore"
+
+  };
+  person.phone = 9876543210;
+  console.log(person);
+  </script>
+
+
+<script>
+  let car= {
+    brand: "Toyota",
+    model : "camery",
+    price : 300000
+  };
+car.price = car.price + (car.price *10/100);
+console.log(car);
+</script>
+
+<script>
+  let person = { name: "shuma", age: 20, city: "indore" };
+
+  function showPerson(person){
+ console.log(person.name);
+  }
+
+  showperson(person);
+  </script>
+
+
+<script>
+  let user = { username: "admin", password: "1234" };
+
+  function checkLogin(user, username, password){
+    if(user.username===username && user.password ===password){
+      return "Login successful",
+    }
+  }
+  console.log(checkLogin(user, "admin", "1234"));
+  </script>
 </body>
 </html>

@@ -340,5 +340,113 @@ Array.from("ABC");
 34. Array.of() — diye gaye arguments se array banata hai
 Array.of(5, 10, 15);
 // [5, 10, 15]
+
+
+
+<script>
+    let number = [10, 20, 30, 40];
+    console.log(number[0]);
+    console.log(number[3]);
+</script>
+
+
+<script>
+    function printAll(arr){
+     for (let i=0; i<arr.length; i++){
+        consoleo.log(arr[i]);
+     }
+    }
+    let showfirst = [10, 20, 30, 40];
+    printAll(showfirst);
+</script>
+
+
+
+<script>
+
+    function sum(arr){
+    let total =0;
+    for(let i=0;i<arr.length;i++){
+        total = total + arr[i];
+    }
+    return total;
+    }
+
+    console.log(sum([5, 15, 25]));
+    </script>
+
+    <script>
+        function findMax(arr){
+            let max =arr[0];
+            for(let i=0 ; i<arr.length;i++){
+                if(arr[i]>max){
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        console.log(findMax([12, 45, 7, 30]));
+    </script>
+
+    <script>
+        function countEven(arr){
+            let count= 0;
+            for(let i=0;i<arr.length;i++){
+                if(arr[i] %2===0){
+                    count = count +1;
+                }
+            }
+            return count;
+        }
+        console.log(countEven([1, 2, 3, 4, 6]));
+    </script>
+
+
+<script>
+let students = [
+  { name: "shuma", age: 20 },
+  { name: "Rahul", age: 17 },
+  { name: "Aman", age: 22 }
+];
+
+function getNames(students){
+    for(let i=0; i<students.length; i++){
+        console.log("name" + students[i].name);
+    }
+}
+getNames(students);
+    </script>
+
+
+<script>
+
+  let students = [
+  { name: "shuma", age: 20 },
+  { name: "Rahul", age: 17 },
+  { name: "Aman", age: 22 }
+];
+    function adults(students){
+      let result = [];
+        for(let i=0;i<students.length;i++){
+            if(students[i].age>=18){
+                result.push(students[i].name);
+            }
+        }
+        return result;
+    }
+  console.log(adults(students)); 
+</script>
+
+<script>
+
+    let personone = { name: "shuma", age: 20 };
+
+    function birthday(personone){
+        personone.age = personone.age + 1;
+        return personone;
+    }
+    birthday(personone);
+console.log(personone.age);
+    </script>
 </body>
 </html>
