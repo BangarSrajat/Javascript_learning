@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Test</h1>
+
+    <script>
+  const user = { name: "Aman", age: 22 };
+
+localStorage.setItem("user", JSON.stringify(user));
+
+const saved = JSON.parse(localStorage.getItem("user"));
+console.log(saved.name);
+    </script>
+  </body>
+</html>

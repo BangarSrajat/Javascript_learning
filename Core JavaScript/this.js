@@ -95,3 +95,5 @@ user.greet1();   // Hi Aman
 user.greet2();   // Hi Aman
 user.greet3();   // Hi (khaali, ya window.name) , this = bahar wala
 user.greet4();   // Hi Aman
+
+
